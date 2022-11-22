@@ -1,0 +1,318 @@
+html{
+    font-size: 16px;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header */
+header{
+    position: relative;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+header > img#icon, header > img#profile, header img#chat{
+    height: 50%;
+}
+
+header > img#logo{
+    height: 80%;
+}
+
+header > img#profile{
+    position: absolute;
+    right: 90px;
+   cursor: pointer;
+}
+
+header img#chat{
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+}
+
+header img#profile:hover, header img#chat:hover{
+    transform: scale(1.05);
+}
+
+
+/* Launch Page */
+#launch-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 80px 0;
+    background-color: #ECE6DA;
+}
+
+.image-and-text{
+    width: min(1100px, 90%);
+    aspect-ratio: 3/1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.image-and-text > img{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-and-text > .description{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10%;
+}
+
+.image-and-text > .description > p{
+    margin-top: 10%;
+    width: 30ch;
+    font-size: 1.1rem;
+}
+
+input[type="button"]{
+    padding: 8px 24px;
+    background-color: darkred;
+    color: white;
+    font-weight: 900;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    border-color: white;
+    cursor: pointer;
+}
+
+input[type="button"]:hover{
+    background-color: rgb(124, 1, 1); /* slightly darker than darkred */
+    filter: drop-shadow(0 0 1px darkred);
+    outline: solid 1px white;
+}
+
+section#events{
+    width: min(1100px, 90%);
+    padding: 4% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+section#events > img{
+    width: 30%;
+    box-shadow: -3px 3px 8px 0px grey;
+    cursor: pointer;
+}
+
+section#events > img:hover{
+    transform: scale(1.02) rotate(-2deg);
+}
+
+input[type='button']#login-or-signup{
+    margin: 40px 0;
+}
+
+
+/* Collabs page */
+#collabs-page{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    background-color: #ECE6DA;
+}
+
+#collabs-page #buttons-wrapper{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#collabs-page #buttons-wrapper #filter-button-wrapper{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+#collabs-page #buttons-wrapper #filter-button-wrapper:hover{
+    transform: scale(1.02);
+}
+
+#collabs-page #buttons-wrapper #filter-button-wrapper img{
+    height: 20px;
+}
+
+#collabs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.post{
+    width: min(1100px, 90%);
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: #D9D9D9;
+}
+
+.post .thumbnail, .post .requirements{
+    overflow: hidden;
+    background-color: white;
+    aspect-ratio: 1/1;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.post .thumbnail{
+    grid-column: 1;
+    justify-self: flex-end;
+}
+
+.post .thumbnail > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.post .requirements{
+    grid-column: -2;
+    justify-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.post .requirements .title{
+    color: darkred;
+    font-weight: 900;
+    margin-top: 20%;
+}
+
+.post .requirements ul{
+    margin-inline: 0;
+    margin-block: 0;
+    padding-inline: 0;
+}
+
+.post .description{
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: 1fr min-content;
+    font-size: 1.2rem;
+    height: 80%;
+    padding: 0 12%;
+}
+
+.post .description .goal{
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin: 0;
+}
+
+.post .description .details{
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.post .description .details > *{
+    margin: 5px 0;
+}
+
+.post .description .details > #category{
+    color: darkred;
+}
+
+.post .description .contact{
+    width: 50px;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.post .description .contact:hover{
+    filter: drop-shadow(0px 1px 0px darkred) drop-shadow(0px 0px 1px white);
+    transform: scale(1.02);
+}
+
+
+/* Voice assistant */
+#voice-assistant{
+    position: fixed;
+    display: flex;
+    height: 80px;
+    bottom: 80px;
+    right: 14px;
+    cursor: pointer;
+    border-radius: 46px;
+    background-color: darkred;
+    padding: 6px 3px 0;
+    outline: solid 4px white;
+    filter: brightness(0.9);
+}
+
+#voice-assistant:hover{
+    transform: scale(1.02);
+    filter: brightness(1);
+}
+
+@media (max-width: 600px) {
+    .image-and-text > .description > p{
+        font-size: 0.6rem;
+    }
+
+    input[type="button"]{
+        font-size: 0.6rem;
+    }
+
+    #collabs-page #buttons-wrapper #filter-button-wrapper{
+        font-size: 1rem;
+    }
+
+    #collabs-page #buttons-wrapper #filter-button-wrapper img{
+        height: 16px;
+    }
+
+    #collabs-page .post .description{
+        font-size: 0.8rem;
+    }
+
+    #collabs-page .post .description .details{
+        font-size: 0.6rem;
+    }
+
+    #collabs-page .post .description .contact{
+        width: 30px;
+    }
+
+    #collabs-page .post .requirements{
+        font-size: 0.5rem;
+        overflow: auto;
+    } 
+
+    #voice-assistant{
+        height: 60px;
+    }
+}
