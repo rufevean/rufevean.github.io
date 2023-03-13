@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+
+//defining varibles
+$primary-color: #270015;
+$primary-font: "Amatic SC";
+$temporary-color: white;
+//body
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #270015;
+    background-image: url("https://www.linkpicture.com/q/100-50-15.png");
+    background-size: auto;
+    background-repeat: repeat;
+    overflow-x: hidden;
+}
+.dark-mode{
+    background-color: #25265c !important;
+    background-image: url("https://www.linkpicture.com/q/100-50-15.png");
+    background-size: auto;
+    background-repeat: repeat;
+}
+//creatng the header ( consiting off the website name, dark mode option and nav
+.header {
+    display: grid;
+    grid-template-columns: 2fr 4fr 1fr 1fr;
+    grid-template-areas: "website-name . dark-mode-toggle menu-toggle";
+    .website-name {
+        padding: 30px;
+        font-size: 6vmin;
+        color: $temporary-color;
+        font-family: $primary-font;
+        margin-left: 10%;
+        margin-top: 7%;
+        text-decoration: none;
+    }
+
+    .dark-mode-toggle {
+        grid-area: dark-mode-toggle;
+        .dark-mode-checkbox {
+            display: none;
+        }
+        .dark-mode-icon {
+            font-size: 1.6rem;
+            margin-top: 45%;
+            color: $temporary-color;
+            z-index: 1;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .menu-toggle {
+        grid-area: menu-toggle;
+    }
+}
+@media screen and (max-width: 480px) {
+    .dark-mode-toggle {
+        margin-top: 50%;
+        padding-right: 10%;
+    }
+}
