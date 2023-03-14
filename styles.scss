@@ -14,7 +14,7 @@ body {
     background-repeat: repeat;
     overflow-x: hidden;
 }
-.dark-mode{
+.dark-mode {
     background-color: #25265c !important;
     background-image: url("https://www.linkpicture.com/q/100-50-15.png");
     background-size: auto;
@@ -23,7 +23,7 @@ body {
 //creatng the header ( consiting off the website name, dark mode option and nav
 .header {
     display: grid;
-    grid-template-columns: 2fr 4fr 1fr 1fr;
+    grid-template-columns: 2fr 3fr 1.5fr 1.5fr;
     grid-template-areas: "website-name . dark-mode-toggle menu-toggle";
     .website-name {
         padding: 30px;
@@ -37,14 +37,15 @@ body {
 
     .dark-mode-toggle {
         grid-area: dark-mode-toggle;
+        justify-self: center;
+        align-self: center;
+        margin-top: 20%;
         .dark-mode-checkbox {
             display: none;
         }
         .dark-mode-icon {
             font-size: 1.6rem;
-            margin-top: 45%;
             color: $temporary-color;
-            z-index: 1;
             &:hover {
                 cursor: pointer;
             }
@@ -52,11 +53,47 @@ body {
     }
     .menu-toggle {
         grid-area: menu-toggle;
+        align-self: center;
+        width: 30px;
+        margin-top: 20%;
+        #menu-toggler{
+            background-color: transparent;
+            border: none;
+            outline: none;
+            width: 40px;
+            cursor: pointer;
+            
+        }
+        &:hover{
+            cursor: pointer;
+        }
+
+
+    }
+}
+.menu-toggled-one{
+    animation-name: menu-toggled-animation-one;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: forwards;
+    animation-delay: 0ms;
+    
+}
+
+
+@keyframes menu-toggled-animation-one{
+    10%{
+        margin-top: 30% !important;
     }
 }
 @media screen and (max-width: 480px) {
     .dark-mode-toggle {
-        margin-top: 50%;
+        margin-top: 45%;
         padding-right: 10%;
     }
+    .dark-mode-toggle .dark-mode-icon {
+        font-size: 1.2rem !important;
+    }
 }
+
+// body-elements

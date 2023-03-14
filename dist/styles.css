@@ -18,7 +18,7 @@ body {
 
 .header {
   display: grid;
-  grid-template-columns: 2fr 4fr 1fr 1fr;
+  grid-template-columns: 2fr 3fr 1.5fr 1.5fr;
   grid-template-areas: "website-name . dark-mode-toggle menu-toggle";
 }
 .header .website-name {
@@ -32,26 +32,57 @@ body {
 }
 .header .dark-mode-toggle {
   grid-area: dark-mode-toggle;
+  justify-self: center;
+  align-self: center;
+  margin-top: 20%;
 }
 .header .dark-mode-toggle .dark-mode-checkbox {
   display: none;
 }
 .header .dark-mode-toggle .dark-mode-icon {
   font-size: 1.6rem;
-  margin-top: 45%;
   color: white;
-  z-index: 1;
 }
 .header .dark-mode-toggle .dark-mode-icon:hover {
   cursor: pointer;
 }
 .header .menu-toggle {
   grid-area: menu-toggle;
+  align-self: center;
+  width: 30px;
+  margin-top: 20%;
+}
+.header .menu-toggle #menu-toggler {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 40px;
+  cursor: pointer;
+}
+.header .menu-toggle:hover {
+  cursor: pointer;
 }
 
+.menu-toggled-one {
+  animation-name: menu-toggled-animation-one;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: forwards;
+  animation-delay: 0ms;
+}
+
+@keyframes menu-toggled-animation-one {
+  10% {
+    margin-top: 30% !important;
+  }
+}
 @media screen and (max-width: 480px) {
   .dark-mode-toggle {
-    margin-top: 50%;
+    margin-top: 45%;
     padding-right: 10%;
+  }
+
+  .dark-mode-toggle .dark-mode-icon {
+    font-size: 1.2rem !important;
   }
 }

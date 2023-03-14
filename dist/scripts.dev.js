@@ -27,7 +27,8 @@ var animationMain = function animationMain() {
 var afterAnimation = function afterAnimation() {
   clearInterval(animationInterval);
   document.getElementById("website-name").innerHTML = "/RUFEVEAN";
-};
+}; //dark mode toggler 
+
 
 var darkModeToggle = document.getElementById("dark-mode-toggler");
 var body = document.body;
@@ -39,4 +40,24 @@ darkModeToggle.addEventListener("input", function (e) {
   } else {
     body.classList.remove("dark-mode");
   }
-});
+}); //  menu toggler animation
+
+var menuTogglerOne = document.getElementById("menu-toggler-one");
+var menuTogglerTwo = document.getElementById("menu-toggler-two");
+var menuTogglerThree = document.getElementById("menu-toggler-three");
+var menuToggler = document.getElementById("menu-toggler");
+menuToggler.addEventListener("input", function (event) {
+  var isChecked = event.target.checked;
+
+  if (isChecked) {
+    menuTogglerOne.classList.add("menu-toggled-one");
+    menuTogglerTwo.classList.add("menu-toggled-two");
+    menuTogglerThree.classList.add("menu-toggled-three");
+  } else {
+    menuTogglerOne.classList.remove("menu-toggled-one");
+    menuTogglerTwo.classList.remove("menu-toggled-two");
+    menuTogglerThree.classList.remove("menu-toggled-three");
+  }
+}); // document.querySelector(".menu-toggler").click(function(){
+//     menuTogglerOne.classList.add("menu-toggled-one");
+// })

@@ -37,6 +37,8 @@ let afterAnimation = function(){
     document.getElementById("website-name").innerHTML = "/RUFEVEAN";
 }
 
+//dark mode toggler 
+ 
 const darkModeToggle  = document.getElementById("dark-mode-toggler");
 const body = document.body
 
@@ -48,3 +50,26 @@ darkModeToggle.addEventListener("input",(e)=>{
         body.classList.remove("dark-mode");
     }
 })
+
+//  menu toggler animation
+
+const menuTogglerOne = document.getElementById("menu-toggler-one")
+const menuTogglerTwo = document.getElementById("menu-toggler-two")
+const menuTogglerThree = document.getElementById("menu-toggler-three")
+const menuToggler = document.getElementById("menu-toggler");
+
+menuToggler.addEventListener("input",(event)=>{
+    const isChecked = event.target.checked;
+    if (isChecked){
+        menuTogglerOne.classList.add("menu-toggled-one");
+        menuTogglerTwo.classList.add("menu-toggled-two");
+        menuTogglerThree.classList.add("menu-toggled-three");
+    }else{
+        menuTogglerOne.classList.remove("menu-toggled-one");
+        menuTogglerTwo.classList.remove("menu-toggled-two");
+        menuTogglerThree.classList.remove("menu-toggled-three");
+    }});
+
+// document.querySelector(".menu-toggler").click(function(){
+//     menuTogglerOne.classList.add("menu-toggled-one");
+// })
