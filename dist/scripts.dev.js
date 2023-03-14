@@ -46,6 +46,14 @@ var menuTogglerOne = document.getElementById("menu-toggler-one");
 var menuTogglerTwo = document.getElementById("menu-toggler-two");
 var menuTogglerThree = document.getElementById("menu-toggler-three");
 var menuToggler = document.getElementById("menu-toggler");
+menuToggler.addEventListener("change", function () {
+  if (menuToggler.checked) {
+    console.log("Checkbox is checked.");
+    menuTogglerOne.classList.add("menu-toggled-one");
+  } else {
+    console.log("Checkbox is not checked.");
+  }
+});
 menuToggler.addEventListener("input", function (event) {
   var isChecked = event.target.checked;
 
@@ -58,6 +66,14 @@ menuToggler.addEventListener("input", function (event) {
     menuTogglerTwo.classList.remove("menu-toggled-two");
     menuTogglerThree.classList.remove("menu-toggled-three");
   }
-}); // document.querySelector(".menu-toggler").click(function(){
-//     menuTogglerOne.classList.add("menu-toggled-one");
-// })
+}); /// languages animation
+
+var languagesArray = ["Hello", "नमस्ते", "Kamusta", "హలో"];
+var countTwo = 0;
+
+var languagesAnimation = function languagesAnimation() {
+  document.getElementById("languages").innerHTML = languagesArray[countTwo];
+  countTwo = countTwo % (languagesArray.length - 1) + 1;
+};
+
+var languagesAnimationInterval = setInterval(languagesAnimation, 500);

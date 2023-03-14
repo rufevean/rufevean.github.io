@@ -8,10 +8,11 @@
     <title>Ruffian</title>
     <script src="https://kit.fontawesome.com/610a3e4f08.js" crossorigin="anonymous"></script>
     <script defer src="scripts.js"></script>
-    <link rel="stylesheet type=" text" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link type="text/css" href="defaultsettings.css" />
 
 <body>
-    <section class="header">
+    <header class="header">
         <a onmouseenter="animationMain()" onmouseleave="afterAnimation()" id="website-name" class="website-name"
             href="https://github.com/rufevean" target="_blank">/rufevean</a>
         <div class="dark-mode-toggle">
@@ -20,14 +21,25 @@
             <label for="dark-mode-toggler"><i class="fa-solid fa-cloud-moon dark-mode-icon "></i></label>
         </div>
         <div class="menu-toggle">
-            <button title="menu-toggler" id="menu-toggler">
+            <input type="checkbox" title="menu-toggler" id="menu-toggler">
+            <label for="menu-toggler">
                 <hr id="menu-toggler-one">
                 <hr id="menu-toggler-two">
                 <hr id="menu-toggler-three">
+            </label>
         </div>
-    </section>
+    </header>
+    <main class="main-body">
+        <div class="languages" id="languages">
+            Hello
+        </div>
+        <div class="introduction-name">
+            ,I am Dheeraj Chowdary
+        </div>
+        <div class="introduction-profession">
+            A Frontend Focused WebDeveloper
+        </div>
 
-
-</body>
+    </main>
 
 </html>

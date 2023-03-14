@@ -3,7 +3,8 @@
 //defining varibles
 $primary-color: #270015;
 $primary-font: "Amatic SC";
-$temporary-color: white;
+$secondary-color: white;
+$defualt-font-size: 6vmin;
 //body
 body {
     margin: 0;
@@ -27,8 +28,8 @@ body {
     grid-template-areas: "website-name . dark-mode-toggle menu-toggle";
     .website-name {
         padding: 30px;
-        font-size: 6vmin;
-        color: $temporary-color;
+        font-size: $defualt-font-size;
+        color: $secondary-color;
         font-family: $primary-font;
         margin-left: 10%;
         margin-top: 7%;
@@ -45,7 +46,7 @@ body {
         }
         .dark-mode-icon {
             font-size: 1.6rem;
-            color: $temporary-color;
+            color: $secondary-color;
             &:hover {
                 cursor: pointer;
             }
@@ -56,33 +57,24 @@ body {
         align-self: center;
         width: 30px;
         margin-top: 20%;
-        #menu-toggler{
-            background-color: transparent;
-            border: none;
-            outline: none;
-            width: 40px;
-            cursor: pointer;
-            
+        #menu-toggler {
+            display: none;
         }
-        &:hover{
+        &:hover {
             cursor: pointer;
         }
-
-
     }
 }
-.menu-toggled-one{
+.menu-toggled-one {
     animation-name: menu-toggled-animation-one;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-direction: forwards;
     animation-delay: 0ms;
-    
 }
 
-
-@keyframes menu-toggled-animation-one{
-    10%{
+@keyframes menu-toggled-animation-one {
+    10% {
         margin-top: 30% !important;
     }
 }
@@ -97,3 +89,74 @@ body {
 }
 
 // body-elements
+
+.main-body {
+    display: grid;
+    grid-template-columns: 25% 1.5fr 6fr 10%;
+    gap:10px;
+    grid-auto-rows: 200px;
+    .languages {
+        font-size: calc($defualt-font-size * 2);
+        color: $secondary-color;
+        font-family: $primary-font;
+        // margin-left: 25%;
+        margin-top: 9%;
+        grid-column: 2/5;
+        grid-row: 1;
+    }
+
+    .introduction-name {
+        font-family: $primary-font;
+        color: $secondary-color;
+        font-size: calc($defualt-font-size * 2);
+        margin-top: 11%;
+        grid-column: 3/5;
+        grid-row: 1;
+    }
+    .introduction-profession{
+        font-family: $primary-font;
+        color: $secondary-color;
+        font-size: $defualt-font-size;
+        grid-column: 2/5;
+        grid-row: 2;
+
+    }
+}
+@media screen and (max-width: 800px) {
+    .main-body {
+        display: grid;
+        .languages {
+            margin-top: 10%;
+            margin-right: 15%;
+            margin-left: 60%;
+            position: static;
+            
+        }
+        .introduction-name {
+            margin-top: 0%;
+            margin-right: 10%;
+            margin-left: auto;
+            // position: absolute;
+        }
+        .introduction-profession{
+            margin-right: 10%;
+            margin-left: auto;
+
+
+        }
+    }
+}
+
+@media screen and (max-width: 1300px){
+    
+    .main-body{
+        .languages,.introduction-name{
+            font-size: 7vmin;
+        }
+        .introduction-profession{
+            font-size: 3vmin;
+            margin-top: 0%;
+        }
+    }
+
+}

@@ -58,6 +58,15 @@ const menuTogglerTwo = document.getElementById("menu-toggler-two")
 const menuTogglerThree = document.getElementById("menu-toggler-three")
 const menuToggler = document.getElementById("menu-toggler");
 
+menuToggler.addEventListener("change", function() {
+  if (menuToggler.checked) {
+    console.log("Checkbox is checked.");
+    menuTogglerOne.classList.add("menu-toggled-one");
+  } else {
+    console.log("Checkbox is not checked.");
+  }
+});
+
 menuToggler.addEventListener("input",(event)=>{
     const isChecked = event.target.checked;
     if (isChecked){
@@ -70,6 +79,14 @@ menuToggler.addEventListener("input",(event)=>{
         menuTogglerThree.classList.remove("menu-toggled-three");
     }});
 
-// document.querySelector(".menu-toggler").click(function(){
-//     menuTogglerOne.classList.add("menu-toggled-one");
-// })
+
+/// languages animation
+
+const languagesArray = [ "Hello", "नमस्ते", "Kamusta", "హలో"];
+let countTwo = 0;
+let languagesAnimation = function(){
+    document.getElementById("languages").innerHTML=languagesArray[countTwo];
+    countTwo = (countTwo %(languagesArray.length-1))+1;
+}
+
+let languagesAnimationInterval = setInterval(languagesAnimation,500);
