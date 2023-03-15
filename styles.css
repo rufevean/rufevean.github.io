@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.color-change {
+  color: white !important;
+}
+
 body {
   -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
   -moz-user-select: none;
@@ -19,6 +27,19 @@ body {
   background-repeat: repeat;
 }
 
+.background {
+  background-image: url("https://www.linkpicture.com/q/655338c996b7fc0b1c0a7e8df5c29c7d_1.jpg");
+  background-position: top;
+  z-index: -3;
+  height: 110%;
+  width: 103%;
+  margin-top: -35%;
+  margin-left: -3%;
+  position: absolute;
+  background-size: cover;
+  float: left;
+}
+
 .header {
   display: grid;
   grid-template-columns: 2fr 3fr 1.5fr 1.5fr;
@@ -28,7 +49,7 @@ body {
   opacity: 80%;
   padding: 30px;
   font-size: 6vmin;
-  color: white;
+  color: #270015;
   font-family: "Amatic SC";
   margin-left: 10%;
   margin-top: 7%;
@@ -46,26 +67,33 @@ body {
 }
 .header .dark-mode-toggle .dark-mode-icon {
   font-size: 1.6rem;
-  color: white;
+  color: #270015;
 }
 .header .dark-mode-toggle .dark-mode-icon:hover {
   cursor: pointer;
 }
 .header .menu-toggle {
-  opacity: 120%;
   width: 30px;
   grid-area: menu-toggle;
-  margin-top: 21%;
+  margin-top: 27%;
   justify-self: start;
 }
 .header .menu-toggle #menu-toggler {
-  margin-top: -10%;
+  margin-top: -5%;
   display: none;
 }
 .header .menu-toggle:hover {
   cursor: pointer;
 }
+.header .menu-toggle .menu-toggler-line {
+  height: 1px;
+  color: #270015;
+}
 .header #menu-toggler {
+  display: none;
+}
+
+.dark-mode-icon-hide {
   display: none;
 }
 
@@ -218,9 +246,14 @@ body {
   margin-left: 100%;
   overflow-x: hidden;
   color: aliceblue;
-  font-size: 30vmin;
+  font-size: 24vmin;
   opacity: 80%;
   margin-top: 10%;
+  font-family: "Amatic SC";
+  background-position: top;
+  width: 103%;
+  overflow-y: hidden;
+  background-size: cover;
 }
 .nav-menu .nav-line {
   font-size: 5vmin;
@@ -229,7 +262,9 @@ body {
   border-width: 1px;
 }
 .nav-menu .nav-elements {
-  opacity: 40%;
+  opacity: 60%;
+}
+.nav-menu .nav-elements:hover {
   opacity: 100%;
 }
 
@@ -260,10 +295,10 @@ body {
   }
 }
 .menu-untoggled {
-  display: inline-flex;
+  display: flex;
   margin-left: 100%;
   animation-name: menu-untoggled;
-  transition-duration: 700ms;
+  transition-duration: 500ms;
   transition-timing-function: ease-in;
 }
 
@@ -273,30 +308,34 @@ body {
   }
   75% {
     margin-left: 75%;
+    display: grid;
   }
   50% {
     margin-left: 50%;
+    display: grid;
   }
   25% {
     margin-left: 25%;
+    display: grid;
   }
   0% {
     margin-left: 0%;
+    display: grid !important;
   }
 }
 .main-body {
-  margin-top: -25%;
+  margin-top: -18%;
   z-index: 1;
   display: grid;
-  grid-template-columns: 25% 1.5fr 6fr 10%;
+  grid-template-columns: 10% 1fr 6fr 10%;
   grid-auto-rows: 200px;
   row-gap: 20px;
   grid-area: ". languages introduction-name ." " . introduction-profession . .";
   opacity: 80%;
+  color: white;
 }
 .main-body .languages {
   font-size: 12vmin;
-  color: white;
   font-family: "Amatic SC";
   margin-top: 9%;
   grid-column: 2/5;
@@ -304,7 +343,6 @@ body {
 }
 .main-body .introduction-name {
   font-family: "Amatic SC";
-  color: white;
   font-size: 12vmin;
   margin-top: 11%;
   grid-column: 3/5;
@@ -313,16 +351,44 @@ body {
 }
 .main-body .introduction-profession {
   font-family: "Amatic SC";
-  color: white;
   font-size: 6vmin;
   grid-column: 2/5;
   grid-row: 2;
+  margin-top: 2%;
 }
 
 .menu-body-hide {
   display: none;
+  opacity: 0%;
 }
 
+.menu-body-show {
+  animation-name: menu-body-show;
+  animation-duration: 500ms;
+  animation-direction: backwards;
+  transition-timing-function: ease-in;
+}
+
+@keyframes menu-body-show {
+  100% {
+    opacity: 101%;
+  }
+  75% {
+    opacity: 80%;
+    margin-right: 25%;
+    margin-top: 20%;
+  }
+  25% {
+    opacity: 50%;
+    margin-right: 50%;
+    margin-top: 15%;
+  }
+  0% {
+    opacity: 0%;
+    margin-right: 100%;
+    margin-top: 10%;
+  }
+}
 @media screen and (max-width: 800px) {
   .main-body {
     display: grid;
@@ -339,6 +405,12 @@ body {
   .main-body .introduction-profession {
     margin-left: auto;
     margin-top: -45%;
+  }
+  .nav-elements {
+    font-size: 12vmin;
+  }
+  .nav-elements .nav-line {
+    font-size: 3vmin;
   }
 }
 @media screen and (min-device-width: 1601px) {

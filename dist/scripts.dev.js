@@ -86,15 +86,29 @@ var languagesAnimationInterval = setInterval(languagesAnimation, 500); // nav me
 
 var nav = document.getElementById("nav-menu");
 var mainBody = document.getElementById("main-body");
+var darkModeIcon = document.getElementById("dark-mode-icon");
+var header = document.getElementById("header");
+var websiteName = document.getElementById("website-name");
+var menutoggle = document.getElementById("menu-toggler-checkbox");
 menuToggler.addEventListener("input", function (event) {
   var isChecked = event.target.checked; //hiding main body while triggering menu
 
   if (isChecked) {
     nav.classList.add("menu-toggled");
     mainBody.classList.add("menu-body-hide");
+    darkModeIcon.classList.add("dark-mode-icon-hide");
+    body.classList.add("overflow-hidden");
+    websiteName.classList.add("color-change");
+    menuTogglerTwo.classList.add("color-change");
+    menuTogglerThree.classList.add("color-change");
   } else {
     nav.classList.remove("menu-toggled");
     mainBody.classList.remove("menu-body-hide");
+    darkModeIcon.classList.remove("dark-mode-icon-hide");
+    header.classList.remove("color-change");
+    websiteName.classList.remove("color-change");
+    menuTogglerTwo.classList.remove("color-change");
+    menuTogglerThree.classList.remove("color-change");
   }
 });
 menuToggler.addEventListener("input", function (event) {
@@ -102,8 +116,10 @@ menuToggler.addEventListener("input", function (event) {
 
   if (isChecked) {
     nav.classList.remove("menu-untoggled");
+    mainBody.classList.remove("menu-body-show");
   } else {
     nav.classList.add("menu-untoggled");
+    mainBody.classList.add("menu-body-show");
   }
 });
 

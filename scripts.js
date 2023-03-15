@@ -57,35 +57,33 @@ const menuTogglerOne = document.getElementById("menu-toggler-one");
 const menuTogglerTwo = document.getElementById("menu-toggler-two");
 const menuTogglerThree = document.getElementById("menu-toggler-three");
 const menuToggler = document.getElementById("menu-toggler");
-const menuToggled = document.getElementById("menu-toggler-checkbox")
+const menuToggled = document.getElementById("menu-toggler-checkbox");
 
-menuToggler.addEventListener("input",(event)=>{
+menuToggler.addEventListener("input", (event) => {
     const isChecked = event.target.checked;
-    if(isChecked){
+    if (isChecked) {
         menuTogglerOne.classList.add("menu-toggled-one");
         menuTogglerTwo.classList.add("menu-toggled-two");
-        menuTogglerThree.classList.add("menu-toggled-three")
-        
-    }else{
-        menuTogglerOne.classList.remove("menu-toggled-one")
-        menuTogglerTwo.classList.remove("menu-toggled-two")
-        menuTogglerThree.classList.remove("menu-toggled-three")
+        menuTogglerThree.classList.add("menu-toggled-three");
+    } else {
+        menuTogglerOne.classList.remove("menu-toggled-one");
+        menuTogglerTwo.classList.remove("menu-toggled-two");
+        menuTogglerThree.classList.remove("menu-toggled-three");
     }
-})
+});
 
-menuToggler.addEventListener("input",(event)=>{
+menuToggler.addEventListener("input", (event) => {
     const isChecked = event.target.checked;
-    if(isChecked ){
-        menuTogglerOne.classList.remove("menu-untoggled-one")
-        menuTogglerTwo.classList.remove("menu-untoggled-two")
-        menuTogglerThree.classList.remove("menu-untoggled-three")
-
-    }else{
-        menuTogglerOne.classList.add("menu-untoggled-one")
-        menuTogglerTwo.classList.add("menu-untoggled-two")
-        menuTogglerThree.classList.add("menu-untoggled-three")
+    if (isChecked) {
+        menuTogglerOne.classList.remove("menu-untoggled-one");
+        menuTogglerTwo.classList.remove("menu-untoggled-two");
+        menuTogglerThree.classList.remove("menu-untoggled-three");
+    } else {
+        menuTogglerOne.classList.add("menu-untoggled-one");
+        menuTogglerTwo.classList.add("menu-untoggled-two");
+        menuTogglerThree.classList.add("menu-untoggled-three");
     }
-})
+});
 
 /// languages animation
 
@@ -99,38 +97,53 @@ let languagesAnimation = function () {
 let languagesAnimationInterval = setInterval(languagesAnimation, 500);
 
 // nav menu
-const nav = document.getElementById("nav-menu")
-const mainBody = document.getElementById("main-body")
-menuToggler.addEventListener("input",(event)=>{
-    const isChecked =event.target.checked;
+const nav = document.getElementById("nav-menu");
+const mainBody = document.getElementById("main-body");
+const darkModeIcon = document.getElementById("dark-mode-icon");
+const header = document.getElementById("header")
+const websiteName = document.getElementById("website-name")
+const menutoggle = document.getElementById("menu-toggler-checkbox")
+menuToggler.addEventListener("input", (event) => {
+    const isChecked = event.target.checked;
     //hiding main body while triggering menu
-    if(isChecked){
+    if (isChecked) {
         nav.classList.add("menu-toggled");
         mainBody.classList.add("menu-body-hide");
-
-
-    }else{
+        darkModeIcon.classList.add("dark-mode-icon-hide");
+        body.classList.add("overflow-hidden");
+        websiteName.classList.add("color-change");
+        menuTogglerTwo.classList.add("color-change");
+        menuTogglerThree.classList.add("color-change");
+    } else {
         nav.classList.remove("menu-toggled");
         mainBody.classList.remove("menu-body-hide");
+        darkModeIcon.classList.remove("dark-mode-icon-hide");
+        header.classList.remove("color-change");
+        websiteName.classList.remove("color-change");
+        menuTogglerTwo.classList.remove("color-change");
+        menuTogglerThree.classList.remove("color-change");
     }
-})
-menuToggler.addEventListener("input",(event)=>{
-    const isChecked =event.target.checked;
-    if(isChecked){
+});
+menuToggler.addEventListener("input", (event) => {
+    const isChecked = event.target.checked;
+    if (isChecked) {
         nav.classList.remove("menu-untoggled");
-
-
-    }else{
+        mainBody.classList.remove("menu-body-show");
+    } else {
         nav.classList.add("menu-untoggled");
+        mainBody.classList.add("menu-body-show");
     }
-})
-window.onmousemove = e => {
+});
+window.onmousemove = (e) => {
     const percent = e.clientY / window.innerHeight;
-    
-    nav.animate({
-      transform: `translateY(${percent * nav.offsetHeight * -1}px)`
-    }, {
-      fill: "forwards",
-      duration: 4000
-    })
-  }
+
+    nav.animate(
+        {
+            transform: `translateY(${percent * nav.offsetHeight * -1}px)`,
+        },
+        {
+            fill: "forwards",
+            duration: 4000,
+        }
+    );
+};
