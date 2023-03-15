@@ -12,24 +12,42 @@
     <link type="text/css" href="defaultsettings.css" />
 
 <body>
+    <!-- header section-->
     <header class="header">
         <a onmouseenter="animationMain()" onmouseleave="afterAnimation()" id="website-name" class="website-name"
             href="https://github.com/rufevean" target="_blank">/rufevean</a>
         <div class="dark-mode-toggle">
             <input class="dark-mode-checkbox dark-mode-icon" type="checkbox" id="dark-mode-toggler" name value
                 unchecked>
-            <label for="dark-mode-toggler"><i class="fa-solid fa-cloud-moon dark-mode-icon "></i></label>
+            <label for="dark-mode-toggler">
+                <i class="fa-solid fa-cloud-moon dark-mode-icon "></i>
+            </label>
         </div>
-        <div class="menu-toggle">
-            <input type="checkbox" title="menu-toggler" id="menu-toggler">
-            <label for="menu-toggler">
+        <input type="checkbox" id="menu-toggler" name value unchecked>
+        <label for="menu-toggler" class="menu-toggler menu-toggle">
+            <div class="menu-toggle" id="menu-toggler-checkbox">
+                >
                 <hr id="menu-toggler-one">
                 <hr id="menu-toggler-two">
                 <hr id="menu-toggler-three">
-            </label>
-        </div>
+            </div>
     </header>
-    <main class="main-body">
+
+    <!-- nav menu -->
+    <nav class="nav-menu" id="nav-menu" onclick="menu-activated()">
+        <hr class=" nav-line nav-line1">
+        <a class="nav-elements nav-menu-home">HOME</a>
+        <hr class="nav-line nav-line2">
+        <a class="nav-elements nav-menu-about">ABOUT</a>
+        <hr class="nav-line nav-line3">
+        <a class="nav-elements nav-menu-work">WORK</a>
+        <hr class="nav-line nav-line4">
+        <a class="nav-elements nav-menu-socials">SOCIALS</a>
+        <hr class="nav-line nav-line5">
+    </nav>
+    <!--    body section -->
+
+    <main class="main-body" id="main-body">
         <div class="languages" id="languages">
             Hello
         </div>
