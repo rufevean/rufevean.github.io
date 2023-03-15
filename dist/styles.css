@@ -339,9 +339,9 @@ body {
   color: white;
 }
 .main-body .languages {
-  font-size: calc($defualt-font-size * 2);
+  font-size: 5vmin;
   font-family: "Amatic SC";
-  margin-top: 9%;
+  margin-top: calc( 9% + 4px);
   grid-column: 2/5;
   grid-row: 1;
 }
@@ -420,8 +420,8 @@ body {
 }
 @media screen and (min-device-width: 1601px) {
   .main-body .languages {
-    font-size: calc($defualt-font-size * 2);
-    margin-top: 11%;
+    font-size: 11vmin;
+    margin-top: calc(11% + 5px);
   }
   .main-body .introduction-name {
     font-size: calc($defualt-font-size * 2 + 1vmin);
