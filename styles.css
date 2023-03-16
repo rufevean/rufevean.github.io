@@ -40,6 +40,15 @@ body {
   float: left;
 }
 
+.menu-toggled-background {
+  margin-top: -90%;
+  filter: blur(4px) grayscale(60%);
+}
+
+.dark-mode-background {
+  background-image: url("https://www.linkpicture.com/q/p118_1.png") !important;
+}
+
 .header {
   display: grid;
   grid-template-columns: 2fr 3fr 1.5fr 1.5fr;
@@ -240,6 +249,25 @@ body {
     font-size: 1.2rem !important;
   }
 }
+.scroll-indication {
+  display: grid;
+  color: white;
+  font-size: 5vmin;
+  margin-right: 5%;
+  margin-top: -2%;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+}
+.scroll-indication-text {
+  font-family: "Amatic SC";
+}
+.scroll-indication-icon {
+  font-size: 4vmin;
+  margin-top: -24%;
+  justify-self: center;
+}
+
 .nav-menu {
   display: inline-flex;
   z-index: -1;
@@ -256,7 +284,7 @@ body {
   background-size: cover;
 }
 .nav-menu .nav-line {
-  font-size: 5vmin;
+  font-size: 3vmin;
   width: 100%;
   color: aliceblue;
   border-width: 1px;
@@ -328,14 +356,14 @@ body {
   z-index: 1;
   display: grid;
   grid-template-columns: 10% 1fr 6fr 10%;
-  grid-auto-rows: 200px;
+  grid-auto-rows: 190px;
   row-gap: 20px;
   grid-area: ". languages introduction-name ." " . introduction-profession . .";
   opacity: 80%;
   color: white;
 }
 .main-body .languages {
-  font-size: 5vmin;
+  font-size: 11vmin;
   font-family: "Amatic SC";
   margin-top: calc(9% + 4px);
   grid-column: 2/5;
@@ -355,6 +383,7 @@ body {
   grid-column: 2/5;
   grid-row: 2;
   margin-top: 2%;
+  margin-bottom: 0%;
 }
 
 .menu-body-hide {
@@ -396,15 +425,31 @@ body {
   }
   .main-body .languages {
     margin-top: 10%;
-    margin-left: 60%;
+    margin-left: 70%;
   }
   .main-body .introduction-name {
-    margin-top: 30%;
+    margin-top: 25%;
     margin-left: auto;
   }
   .main-body .introduction-profession {
     margin-left: auto;
-    margin-top: -45%;
+    margin-top: -32%;
+  }
+  .header .website-name {
+    color: white;
+  }
+  .header .dark-mode-toggle .dark-mode-icon {
+    color: aliceblue;
+  }
+  .header .menu-toggle {
+    margin-top: 43%;
+    margin-right: 5%;
+  }
+  .header .menu-toggle .menu-toggler-line {
+    color: aliceblue;
+  }
+  .scroll-indication {
+    display: none;
   }
   .nav-elements {
     font-size: 12vmin;
@@ -412,19 +457,37 @@ body {
   .nav-elements .nav-line {
     font-size: 3vmin;
   }
+  .background {
+    display: none;
+  }
 }
 @media screen and (min-device-width: 1601px) {
   .main-body .languages {
     font-size: 11vmin;
-    margin-top: calc(11% + 5px);
+    margin-top: calc(10% + 5px);
   }
   .main-body .introduction-name {
     font-size: 13vmin;
-    margin-top: 13%;
+    margin-top: 12%;
   }
   .main-body .introduction-profession {
     font-size: 7vmin;
     margin-top: 6%;
+  }
+  .header .website-name {
+    font-size: 7vmin;
+  }
+  .header .dark-mode-toggle .dark-mode-icon {
+    font-size: 1.8rem;
+  }
+  .header .menu-toggle {
+    width: 40px;
+  }
+  .scroll-indication-text {
+    margin-top: 94%;
+  }
+  .scroll-indication-icon {
+    margin-top: -24%;
   }
 }
 @media screen and (max-width: 1300px) {
@@ -435,4 +498,78 @@ body {
   .main-body .introduction-profession {
     font-size: 6vmin;
   }
+}
+.quote {
+  display: flex;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  margin-top: 5%;
+  flex-direction: column;
+}
+.quote-svg-one {
+  width: 700px;
+  height: 500px;
+  opacity: 100%;
+  margin-left: 65%;
+  justify-self: center;
+  margin-bottom: 2%;
+}
+.quote-text {
+  align-self: center;
+  font-family: "Amatic SC";
+  font-size: 5vmin;
+}
+.quote-svg-two {
+  width: 700px;
+  height: 500px;
+  opacity: 100%;
+  margin-left: -60%;
+  margin-top: 2%;
+  justify-self: center;
+}
+.quote-icons {
+  opacity: 60%;
+  position: absolute;
+  font-size: 12vmin;
+}
+.quote-icons .quote-icon-one {
+  margin-left: -535%;
+  margin-top: 500%;
+  margin-right: auto;
+}
+.quote-icons .quote-icon-two {
+  margin-right: -110%;
+  margin-top: 100%;
+  margin-left: 500%;
+}
+.quote-author {
+  font-size: 3vmin;
+  font-family: "Amatic SC";
+  position: absolute;
+  margin-top: 36%;
+}
+
+@media only screen and (min-width: 1601px) {
+  .quote-icons .quote-icon-one {
+    margin-top: 400%;
+  }
+  .quote-icons .quote-icon-two {
+    margin-top: 50%;
+  }
+  .quote-author {
+    margin-top: 30%;
+  }
+}
+.about {
+  display: grid;
+}
+.about .about-header {
+  font-size: 6vmin;
+  font-family: "Amatic SC";
+  color: white;
+}
+.about-information {
+  font-size: 5vmin;
+  font-family: "Amatic SC";
+  color: white;
 }/*# sourceMappingURL=styles.css.map */

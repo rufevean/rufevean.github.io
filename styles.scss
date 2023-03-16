@@ -4,11 +4,11 @@ $secondary-color: #270015;
 $primary-font: "Amatic SC";
 $tertiary-color: white;
 $defualt-font-size: 6vmin;
-.overflow-hidden{
+.overflow-hidden {
     overflow: hidden;
 }
 .color-change {
-    color:$tertiary-color !important;
+    color: $tertiary-color !important;
 }
 //body
 body {
@@ -42,6 +42,14 @@ body {
     position: absolute;
     background-size: cover;
     float: left;
+}
+.menu-toggled-background {
+    margin-top: -90%;
+    filter: blur(4px) grayscale(60%);
+}
+
+.dark-mode-background {
+    background-image: url("https://www.linkpicture.com/q/p118_1.png") !important;
 }
 //creatng the header ( consiting off the website name, dark mode option and nav
 .header {
@@ -243,7 +251,27 @@ body {
         font-size: 1.2rem !important;
     }
 }
+// scroll down
 
+.scroll-indication {
+    display: grid;
+    color: $tertiary-color;
+    font-size: calc($defualt-font-size - 1vmin);
+    margin-right: 5%;
+    // margin-left: 65%;
+    margin-top: -2%;
+    justify-content: end;
+    align-items: center;
+    gap: 5px;
+    &-text {
+        font-family: $primary-font;
+    }
+    &-icon {
+        font-size: 4vmin;
+        margin-top: -24%;
+        justify-self: center;
+    }
+}
 //navigation-elements
 
 .nav-menu {
@@ -262,7 +290,7 @@ body {
     background-size: cover;
 
     .nav-line {
-        font-size: 5vmin;
+        font-size: 3vmin;
         width: 100%;
         color: aliceblue;
         border-width: 1px;
@@ -336,16 +364,16 @@ body {
     z-index: 1;
     display: grid;
     grid-template-columns: 10% 1fr 6fr 10%;
-    grid-auto-rows: 200px;
+    grid-auto-rows: 190px;
     row-gap: 20px;
     grid-area: ". languages introduction-name ."
         " . introduction-profession . .";
     opacity: 80%;
     color: $tertiary-color;
     .languages {
-        font-size: 5vmin;
+        font-size: 11vmin;
         font-family: $primary-font;
-        margin-top: calc( 9% + 4px);
+        margin-top: calc(9% + 4px);
         grid-column: 2/5;
         grid-row: 1;
     }
@@ -363,6 +391,7 @@ body {
         grid-column: 2/5;
         grid-row: 2;
         margin-top: 2%;
+        margin-bottom: 0%;
     }
 }
 .menu-body-hide {
@@ -404,23 +433,45 @@ body {
         margin-right: 15%;
         .languages {
             margin-top: 10%;
-            margin-left: 60%;
+            margin-left: 70%;
         }
         .introduction-name {
-            margin-top: 30%;
+            margin-top: 25%;
             margin-left: auto;
         }
         .introduction-profession {
             margin-left: auto;
-            margin-top: -45%;
+            margin-top: -32%;
         }
     }
-
+    .header {
+        .website-name {
+            color: white;
+        }
+        .dark-mode-toggle {
+            .dark-mode-icon {
+                color: aliceblue;
+            }
+        }
+        .menu-toggle {
+            margin-top: 43%;
+            margin-right: 5%;
+            .menu-toggler-line {
+                color: aliceblue;
+            }
+        }
+    }
+    .scroll-indication {
+        display: none;
+    }
     .nav-elements {
         font-size: 12vmin;
         .nav-line {
             font-size: 3vmin;
         }
+    }
+    .background {
+        display: none;
     }
 }
 
@@ -428,16 +479,38 @@ body {
     .main-body {
         .languages {
             font-size: 11vmin;
-            margin-top: calc(11% + 5px);
+            margin-top: calc(10% + 5px);
         }
 
         .introduction-name {
             font-size: calc($defualt-font-size * 2 + 1vmin);
-            margin-top: 13%;
+            margin-top: 12%;
         }
         .introduction-profession {
             font-size: calc($defualt-font-size + 1vmin);
             margin-top: 6%;
+        }
+    }
+
+    .header {
+        .website-name {
+            font-size: calc($defualt-font-size + 1vmin);
+        }
+        .dark-mode-toggle {
+            .dark-mode-icon {
+                font-size: 1.8rem;
+            }
+        }
+        .menu-toggle {
+            width: 40px;
+        }
+    }
+    .scroll-indication {
+        &-text {
+            margin-top: 94%;
+        }
+        &-icon {
+            margin-top: -24%;
         }
     }
 }
@@ -450,5 +523,91 @@ body {
         .introduction-profession {
             font-size: 6vmin;
         }
+    }
+}
+
+// quote section
+
+.quote {
+    display: flex;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    margin-top: 5%;
+    flex-direction: column;
+    &-svg-one {
+        width: 700px;
+        height: 500px;
+        opacity: 100%;
+        margin-left: 65%;
+        justify-self: center;
+        margin-bottom: 2%;
+    }
+    &-text {
+        align-self: center;
+        font-family: $primary-font;
+        font-size: calc($defualt-font-size - 1vmin);
+    }
+
+    &-svg-two {
+        width: 700px;
+        height: 500px;
+        opacity: 100%;
+        margin-left: -60%;
+        margin-top: 2%;
+        justify-self: center;
+    }
+    &-icons {
+        opacity: 60%;
+        position: absolute;
+        font-size: calc($defualt-font-size * 2);
+        .quote-icon-one {
+            margin-left: -535%;
+            margin-top: 500%;
+            margin-right: auto;
+        }
+        .quote-icon-two {
+            margin-right: -110%;
+            margin-top: 100%;
+            margin-left: 500%;
+        }
+    }
+    &-author {
+        font-size: 3vmin;
+        font-family: $primary-font;
+        position: absolute;
+        margin-top: 36%;
+    }
+}
+
+@media only screen and (min-width: 1601px){
+    .quote{
+        &-icons{
+            .quote-icon-one{
+                margin-top: 400%;
+            }
+            .quote-icon-two{
+                margin-top: 50%;
+            }
+        }
+        &-author{
+            margin-top: 30%;
+        }
+    }
+
+}
+//about me section
+
+.about{
+    display: grid;
+    .about-header{
+        font-size: $defualt-font-size;
+        font-family: $primary-font;
+        color:white;
+
+    }
+    &-information{
+        font-size: calc($defualt-font-size - 1vmin);
+        font-family: $primary-font;
+        color:white;
     }
 }

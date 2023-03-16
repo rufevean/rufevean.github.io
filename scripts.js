@@ -46,8 +46,10 @@ darkModeToggle.addEventListener("input", (e) => {
     const isChecked = e.target.checked;
     if (isChecked) {
         body.classList.add("dark-mode");
+        background.classList.add("dark-mode-background");
     } else {
         body.classList.remove("dark-mode");
+        background.classList.remove("dark-mode-background");
     }
 });
 
@@ -103,6 +105,7 @@ const darkModeIcon = document.getElementById("dark-mode-icon");
 const header = document.getElementById("header")
 const websiteName = document.getElementById("website-name")
 const menutoggle = document.getElementById("menu-toggler-checkbox")
+const background = document.getElementById("background")
 menuToggler.addEventListener("input", (event) => {
     const isChecked = event.target.checked;
     //hiding main body while triggering menu
@@ -114,6 +117,7 @@ menuToggler.addEventListener("input", (event) => {
         websiteName.classList.add("color-change");
         menuTogglerTwo.classList.add("color-change");
         menuTogglerThree.classList.add("color-change");
+        background.classList.add("menu-toggled-background");
     } else {
         nav.classList.remove("menu-toggled");
         mainBody.classList.remove("menu-body-hide");
@@ -122,6 +126,8 @@ menuToggler.addEventListener("input", (event) => {
         websiteName.classList.remove("color-change");
         menuTogglerTwo.classList.remove("color-change");
         menuTogglerThree.classList.remove("color-change");
+        background.classList.remove("menu-toggled-background");
+        body.classList.remove("overflow-hidden");
     }
 });
 menuToggler.addEventListener("input", (event) => {
@@ -143,7 +149,7 @@ window.onmousemove = (e) => {
         },
         {
             fill: "forwards",
-            duration: 4000,
+            duration: 5000,
         }
     );
 };

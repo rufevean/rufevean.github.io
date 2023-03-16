@@ -37,8 +37,10 @@ darkModeToggle.addEventListener("input", function (e) {
 
   if (isChecked) {
     body.classList.add("dark-mode");
+    background.classList.add("dark-mode-background");
   } else {
     body.classList.remove("dark-mode");
+    background.classList.remove("dark-mode-background");
   }
 }); //  menu toggler animation
 
@@ -90,6 +92,7 @@ var darkModeIcon = document.getElementById("dark-mode-icon");
 var header = document.getElementById("header");
 var websiteName = document.getElementById("website-name");
 var menutoggle = document.getElementById("menu-toggler-checkbox");
+var background = document.getElementById("background");
 menuToggler.addEventListener("input", function (event) {
   var isChecked = event.target.checked; //hiding main body while triggering menu
 
@@ -101,6 +104,7 @@ menuToggler.addEventListener("input", function (event) {
     websiteName.classList.add("color-change");
     menuTogglerTwo.classList.add("color-change");
     menuTogglerThree.classList.add("color-change");
+    background.classList.add("menu-toggled-background");
   } else {
     nav.classList.remove("menu-toggled");
     mainBody.classList.remove("menu-body-hide");
@@ -109,6 +113,8 @@ menuToggler.addEventListener("input", function (event) {
     websiteName.classList.remove("color-change");
     menuTogglerTwo.classList.remove("color-change");
     menuTogglerThree.classList.remove("color-change");
+    background.classList.remove("menu-toggled-background");
+    body.classList.remove("overflow-hidden");
   }
 });
 menuToggler.addEventListener("input", function (event) {
@@ -129,6 +135,6 @@ window.onmousemove = function (e) {
     transform: "translateY(".concat(percent * nav.offsetHeight * -1, "px)")
   }, {
     fill: "forwards",
-    duration: 4000
+    duration: 5000
   });
 };
