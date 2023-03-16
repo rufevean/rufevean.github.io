@@ -579,35 +579,84 @@ body {
     }
 }
 
-@media only screen and (min-width: 1601px){
-    .quote{
-        &-icons{
-            .quote-icon-one{
+@media only screen and (min-width: 1601px) {
+    .quote {
+        &-icons {
+            .quote-icon-one {
                 margin-top: 400%;
             }
-            .quote-icon-two{
+            .quote-icon-two {
                 margin-top: 50%;
             }
         }
-        &-author{
+        &-author {
             margin-top: 30%;
         }
     }
-
 }
 //about me section
 
-.about{
+.about {
     display: grid;
-    .about-header{
+    grid-template-columns: 3fr 1fr 3fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    .about-header {
         font-size: $defualt-font-size;
         font-family: $primary-font;
-        color:white;
-
+        color: white;
+        grid-row: 1;
+        justify-self: self-end;
     }
-    &-information{
+    &-information {
         font-size: calc($defualt-font-size - 1vmin);
         font-family: $primary-font;
-        color:white;
+        color: white;
+        grid-row: 2;
+        margin-left: 30%;
+        margin-right: -19%;
+        &-skills {
+            color: rebeccapurple;
+            display: inline;
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
+
+    &-line {
+        width: 400px;
+        transform: rotate(90deg);
+        height: 0px;
+        grid-row: span 2;
+        margin-top: 50%;
+    }
+    .empty-space {
+        grid-row: span 2;
+        grid-column: 3;
+        width: 200px;
+        height: 200px;
+        margin-top: 10%;
+    }
+}
+
+.machine-learning {
+    width: 350px;
+    height: 350px;
+    filter: grayscale(100%);
+    display: none;
+}
+
+.machine-learning-png-show {
+    display: inline;
+}
+.deep-learning {
+    width: 350px;
+    height: 350px;
+    filter: grayscale(100%);
+    display: none;
+}
+
+.deep-learning-png-show {
+    display: inline;
 }

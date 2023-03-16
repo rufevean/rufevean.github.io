@@ -138,3 +138,23 @@ window.onmousemove = function (e) {
     duration: 5000
   });
 };
+
+var machinelearningIcon = document.getElementById("machine-learning-png");
+
+var machineLearningPng = function machineLearningPng() {
+  machinelearningIcon.classList.add("machine-learning-png-show");
+};
+
+var machineLearningPngLeave = function machineLearningPngLeave() {
+  machinelearningIcon.classList.remove("machine-learning-png-show");
+};
+
+var deepLearningIcon = document.getElementById("deep-learning-png");
+
+var deepLearningPng = function deepLearningPng() {
+  deepLearningIcon.classList.add("deep-learning-png-show");
+};
+
+var deepLearningPngLeave = function deepLearningPngLeave() {
+  deepLearningIcon.classList.remove("deep-learning-png-show");
+};
