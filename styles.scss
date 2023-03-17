@@ -894,3 +894,17 @@ body {
         color: rgb(185, 48, 30);
     }
 }
+
+.footer{
+    margin-bottom: 2%;
+    font-size: 3vmin;
+    font-family: $primary-font;
+    color: white;
+    display: flex;
+    justify-content: center;
+    .red-heart{
+        width: 30px;
+        height: 30px;
+        margin-left:10px;
+    }
+}
