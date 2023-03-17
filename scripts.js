@@ -102,10 +102,10 @@ let languagesAnimationInterval = setInterval(languagesAnimation, 500);
 const nav = document.getElementById("nav-menu");
 const mainBody = document.getElementById("main-body");
 const darkModeIcon = document.getElementById("dark-mode-icon");
-const header = document.getElementById("header")
-const websiteName = document.getElementById("website-name")
-const menutoggle = document.getElementById("menu-toggler-checkbox")
-const background = document.getElementById("background")
+const header = document.getElementById("header");
+const websiteName = document.getElementById("website-name");
+const menutoggle = document.getElementById("menu-toggler-checkbox");
+const background = document.getElementById("background");
 menuToggler.addEventListener("input", (event) => {
     const isChecked = event.target.checked;
     //hiding main body while triggering menu
@@ -153,23 +153,107 @@ window.onmousemove = (e) => {
         }
     );
 };
-let machinelearningIcon = document.getElementById("machine-learning-png")
+let machinelearningIcon = document.getElementById("machine-learning-png");
 
-let machineLearningPng = function(){
-    machinelearningIcon.classList.add("machine-learning-png-show");
-}
+let machineLearningPng = function () {
+    machinelearningIcon.classList.add("png-show");
+};
 
-let machineLearningPngLeave = function(){
-    machinelearningIcon.classList.remove("machine-learning-png-show");
-}
+let machineLearningPngLeave = function () {
+    machinelearningIcon.classList.remove("png-show");
+};
 
+let deepLearningIcon = document.getElementById("deep-learning-png");
 
-let deepLearningIcon = document.getElementById("deep-learning-png")
+let deepLearningPng = function () {
+    deepLearningIcon.classList.add("png-show");
+};
 
-let deepLearningPng = function(){
-    deepLearningIcon.classList.add("deep-learning-png-show");
-}
+let deepLearningPngLeave = function () {
+    deepLearningIcon.classList.remove("png-show");
+};
 
-let deepLearningPngLeave = function(){
-    deepLearningIcon.classList.remove("deep-learning-png-show");
-}
+let web3Icon = document.getElementById("web3-png");
+
+let web3Png = function () {
+    web3Icon.classList.add("png-show");
+};
+
+let web3PngLeave = function () {
+    web3Icon.classList.remove("png-show");
+};
+
+let deadliftsIcon = document.getElementById("deadlifts-png");
+
+let deadliftsPng = function () {
+    deadliftsIcon.classList.add("png-show");
+};
+
+let deadliftsPngLeave = function () {
+    deadliftsIcon.classList.remove("png-show");
+};
+
+let f1Icon = document.getElementById("f1-png");
+
+let f1Png = function () {
+    f1Icon.classList.add("png-show");
+};
+
+let f1PngLeave = function () {
+    f1Icon.classList.remove("png-show");
+};
+
+let sunsetsIcon = document.getElementById("sunsets-png");
+
+let sunsetsPng = function () {
+    sunsetsIcon.classList.add("png-show");
+};
+
+let sunsetsPngLeave = function () {
+    sunsetsIcon.classList.remove("png-show");
+};
+
+let workPython = document.getElementById("work-python");
+
+let pythonPng = function () {
+    workPython.classList.add("png-show");
+};
+
+let pythonPngLeave = function () {
+    workPython.classList.remove("png-show");
+};
+
+let workjavascript = document.getElementById("work-javascript");
+let javascriptPng = function () {
+    workjavascript.classList.add("png-show");
+};
+
+let javascriptPngLeave = function () {
+    workjavascript.classList.remove("png-show");
+};
+
+let workc = document.getElementById("work-c");
+let cPng = function () {
+    workc.classList.add("png-show");
+};
+
+let cLeave = function () {
+    workc.classList.remove("png-show");
+};
+let workfigma = document.getElementById("work-c");
+let figmaPng = function () {
+    workfigma.classList.add("png-show");
+};
+
+let figmaPngLeave = function () {
+    workfigma.classList.remove("png-show");
+};
+let worktensorflow = document.getElementById("work-tensorflow");
+
+let tensorflowPng = function () {
+    worktensorflow.classList.add("png-show");
+};
+
+let tensorflowPngLeave = function () {
+    worktensorflow.classList.remove("png-show");
+};

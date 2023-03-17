@@ -142,19 +142,109 @@ window.onmousemove = function (e) {
 var machinelearningIcon = document.getElementById("machine-learning-png");
 
 var machineLearningPng = function machineLearningPng() {
-  machinelearningIcon.classList.add("machine-learning-png-show");
+  machinelearningIcon.classList.add("png-show");
 };
 
 var machineLearningPngLeave = function machineLearningPngLeave() {
-  machinelearningIcon.classList.remove("machine-learning-png-show");
+  machinelearningIcon.classList.remove("png-show");
 };
 
 var deepLearningIcon = document.getElementById("deep-learning-png");
 
 var deepLearningPng = function deepLearningPng() {
-  deepLearningIcon.classList.add("deep-learning-png-show");
+  deepLearningIcon.classList.add("png-show");
 };
 
 var deepLearningPngLeave = function deepLearningPngLeave() {
-  deepLearningIcon.classList.remove("deep-learning-png-show");
+  deepLearningIcon.classList.remove("png-show");
+};
+
+var web3Icon = document.getElementById("web3-png");
+
+var web3Png = function web3Png() {
+  web3Icon.classList.add("png-show");
+};
+
+var web3PngLeave = function web3PngLeave() {
+  web3Icon.classList.remove("png-show");
+};
+
+var deadliftsIcon = document.getElementById("deadlifts-png");
+
+var deadliftsPng = function deadliftsPng() {
+  deadliftsIcon.classList.add("png-show");
+};
+
+var deadliftsPngLeave = function deadliftsPngLeave() {
+  deadliftsIcon.classList.remove("png-show");
+};
+
+var f1Icon = document.getElementById("f1-png");
+
+var f1Png = function f1Png() {
+  f1Icon.classList.add("png-show");
+};
+
+var f1PngLeave = function f1PngLeave() {
+  f1Icon.classList.remove("png-show");
+};
+
+var sunsetsIcon = document.getElementById("sunsets-png");
+
+var sunsetsPng = function sunsetsPng() {
+  sunsetsIcon.classList.add("png-show");
+};
+
+var sunsetsPngLeave = function sunsetsPngLeave() {
+  sunsetsIcon.classList.remove("png-show");
+};
+
+var workPython = document.getElementById("work-python");
+
+var pythonPng = function pythonPng() {
+  workPython.classList.add("png-show");
+};
+
+var pythonPngLeave = function pythonPngLeave() {
+  workPython.classList.remove("png-show");
+};
+
+var workjavascript = document.getElementById("work-javascript");
+
+var javascriptPng = function javascriptPng() {
+  workjavascript.classList.add("png-show");
+};
+
+var javascriptPngLeave = function javascriptPngLeave() {
+  workjavascript.classList.remove("png-show");
+};
+
+var workc = document.getElementById("work-c");
+
+var cPng = function cPng() {
+  workc.classList.add("png-show");
+};
+
+var cLeave = function cLeave() {
+  workc.classList.remove("png-show");
+};
+
+var workfigma = document.getElementById("work-c");
+
+var figmaPng = function figmaPng() {
+  workfigma.classList.add("png-show");
+};
+
+var figmaPngLeave = function figmaPngLeave() {
+  workfigma.classList.remove("png-show");
+};
+
+var worktensorflow = document.getElementById("work-tensorflow");
+
+var tensorflowPng = function tensorflowPng() {
+  worktensorflow.classList.add("png-show");
+};
+
+var tensorflowPngLeave = function tensorflowPngLeave() {
+  worktensorflow.classList.remove("png-show");
 };
