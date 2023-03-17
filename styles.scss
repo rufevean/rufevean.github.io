@@ -899,12 +899,12 @@ body {
     margin-bottom: 2%;
     font-size: 3vmin;
     font-family: $primary-font;
-    color: white;
+    color: rgb(241, 241, 241);
     display: flex;
     justify-content: center;
     .red-heart{
         width: 30px;
         height: 30px;
-        margin-left:10px;
+        margin-left:10px; 
     }
 }
