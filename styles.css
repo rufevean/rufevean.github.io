@@ -847,7 +847,7 @@ body {
   margin-bottom: 2%;
   font-size: 3vmin;
   font-family: "Amatic SC";
-  color: white;
+  color: rgb(241, 241, 241);
   display: flex;
   justify-content: center;
 }
