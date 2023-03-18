@@ -259,8 +259,10 @@ var gethome = function gethome() {
   menuTogglerThree.classList.remove("color-change");
   background.classList.remove("menu-toggled-background");
   body.classList.remove("overflow-hidden");
-}; //cursor 
-// const cursor = document.querySelector(".cursor");
-// document.addEventListener("mousemove", e => {
-//     cursor.setAttribute("style", "top : " + (e.pageY - 35) + "px;left : " + (e.pageX - 35) + "px")
-// })
+};
+
+cursor;
+var cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove", function (e) {
+  cursor.setAttribute("style", "top : " + (e.pageY - 35) + "px;left : " + (e.pageX - 35) + "px");
+});
