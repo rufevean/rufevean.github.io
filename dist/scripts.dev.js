@@ -229,7 +229,7 @@ var cLeave = function cLeave() {
   workc.classList.remove("png-show");
 };
 
-var workfigma = document.getElementById("work-c");
+var workfigma = document.getElementById("work-figma");
 
 var figmaPng = function figmaPng() {
   workfigma.classList.add("png-show");

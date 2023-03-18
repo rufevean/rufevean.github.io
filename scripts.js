@@ -241,7 +241,7 @@ let cPng = function () {
 let cLeave = function () {
     workc.classList.remove("png-show");
 };
-let workfigma = document.getElementById("work-c");
+let workfigma = document.getElementById("work-figma");
 let figmaPng = function () {
     workfigma.classList.add("png-show");
 };
