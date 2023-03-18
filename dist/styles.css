@@ -21,7 +21,6 @@ body {
   background-size: auto;
   background-repeat: repeat;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 .dark-mode {
@@ -37,7 +36,7 @@ body {
   z-index: -3;
   height: 110%;
   width: 103%;
-  margin-top: -33%;
+  margin-top: -29%;
   margin-left: -3%;
   position: absolute;
   background-size: cover;
@@ -45,7 +44,7 @@ body {
 }
 
 .menu-toggled-background {
-  margin-top: -90%;
+  margin-top: -70%;
   filter: blur(4px) grayscale(60%);
 }
 
@@ -286,12 +285,13 @@ body {
 .nav-menu {
   display: inline-flex;
   z-index: -1;
-  margin-left: 100%;
+  margin-left: -100%;
   overflow-x: hidden;
   color: aliceblue;
-  font-size: calc($defualt-font-size * 4);
+  font-size: calc($defualt-font-size * 3);
   opacity: 80%;
   margin-top: 10%;
+  margin-right: 10%;
   font-family: "Amatic SC";
   background-position: top;
   width: 103%;
@@ -300,12 +300,14 @@ body {
 }
 .nav-menu .nav-line {
   font-size: 3vmin;
-  width: 100%;
+  width: 25%;
+  align-items: center;
   color: aliceblue;
   border-width: 1px;
 }
 .nav-menu .nav-elements {
   opacity: 60%;
+  margin-left: 43%;
 }
 .nav-menu .nav-elements:hover {
   opacity: 100%;
@@ -886,6 +888,7 @@ a {
   animation: cursora 0.5s infinite alternate;
   background-color: #000000;
   opacity: 40%;
+  pointer-events: none;
 }
 
 @keyframes cursora {

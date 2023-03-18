@@ -272,7 +272,7 @@ let gethome = function () {
 };
 
 
-cursor 
+//cursor 
 const cursor = document.querySelector(".cursor");
 document.addEventListener("mousemove", e => {
     cursor.setAttribute("style", "top : " + (e.pageY - 35) + "px;left : " + (e.pageX - 35) + "px")
