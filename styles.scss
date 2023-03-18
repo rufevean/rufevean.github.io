@@ -87,7 +87,7 @@ body {
             font-size: 1.6rem;
             color:white;
             &:hover {
-                cursor: pointer;
+                cursor: none;
             }
             @media screen and (min-width: 1601px){
                 margin-top: calc(21% + 10px);
@@ -105,7 +105,7 @@ body {
             display: none;
         }
         &:hover {
-            cursor: pointer;
+            cursor: none;
         }
         .menu-toggler-line {
             background: white;
@@ -630,14 +630,14 @@ body {
             color: rebeccapurple;
             display: inline;
             &:hover {
-                cursor: pointer;
+                cursor: none;
             }
         }
         &-interests {
             color: rgb(185, 48, 30);
             display: inline;
             &:hover {
-                cursor: pointer;
+                cursor: none;
             }
         }
     }
@@ -815,12 +815,12 @@ body {
         margin-right: 13%;
         .work-information-skills {
             display: inline;
-            cursor: pointer;
+            cursor: none;
             color: rebeccapurple;
         }
         .work-information-tools {
             display: inline;
-            cursor: pointer;
+            cursor: none;
             color: rgb(185, 48, 30);
         }
     }
@@ -887,7 +887,7 @@ body {
     justify-content: center;
     margin-top: 25%;
     margin-bottom: 20%;
-    cursor: pointer;
+    cursor: none;
     :hover{
         text-decoration:wavy;
         font-size: 11vmin;
@@ -907,4 +907,34 @@ body {
         height: 30px;
         margin-left:10px; 
     }
+}
+
+a{
+    text-decoration: none;
+    color:white
+}
+
+.cursor{
+    width: 70px;
+    height: 70px;
+    border: 2px solid #b3a5a5;
+    border-radius: 50%;
+    position: absolute;
+    transition-timing-function: ease-in;
+    animation: cursora .5s infinite alternate;
+    background-color: #000000;
+    opacity: 40%;
+    // z-index: 1000;
+}
+
+@keyframes cursora {
+
+    from{
+        transform: scale(1);
+    }
+
+    to {
+        transform:scale(0.7);
+    }
+    
 }

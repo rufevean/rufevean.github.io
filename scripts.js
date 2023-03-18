@@ -57,6 +57,7 @@ darkModeToggle.addEventListener("input", (e) => {
 
 const menuTogglerOne = document.getElementById("menu-toggler-one");
 const menuTogglerTwo = document.getElementById("menu-toggler-two");
+
 const menuTogglerThree = document.getElementById("menu-toggler-three");
 const menuToggler = document.getElementById("menu-toggler");
 const menuToggled = document.getElementById("menu-toggler-checkbox");
@@ -257,3 +258,22 @@ let tensorflowPng = function () {
 let tensorflowPngLeave = function () {
     worktensorflow.classList.remove("png-show");
 };
+
+let gethome = function () {
+    nav.classList.remove("menu-toggled");
+    mainBody.classList.remove("menu-body-hide");
+    darkModeIcon.classList.remove("dark-mode-icon-hide");
+    header.classList.remove("color-change");
+    websiteName.classList.remove("color-change");
+    menuTogglerTwo.classList.remove("color-change");
+    menuTogglerThree.classList.remove("color-change");
+    background.classList.remove("menu-toggled-background");
+    body.classList.remove("overflow-hidden");
+};
+
+
+//cursor 
+const cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove", e => {
+    cursor.setAttribute("style", "top : " + (e.pageY - 35) + "px;left : " + (e.pageX - 35) + "px")
+})

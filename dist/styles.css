@@ -86,7 +86,7 @@ body {
   color: white;
 }
 .header .dark-mode-toggle .dark-mode-icon:hover {
-  cursor: pointer;
+  cursor: none;
 }
 @media screen and (min-width: 1601px) {
   .header .dark-mode-toggle .dark-mode-icon {
@@ -104,7 +104,7 @@ body {
   display: none;
 }
 .header .menu-toggle:hover {
-  cursor: pointer;
+  cursor: none;
 }
 .header .menu-toggle .menu-toggler-line {
   background: white;
@@ -606,14 +606,14 @@ body {
   display: inline;
 }
 .about-information-skills:hover {
-  cursor: pointer;
+  cursor: none;
 }
 .about-information-interests {
   color: #b9301e;
   display: inline;
 }
 .about-information-interests:hover {
-  cursor: pointer;
+  cursor: none;
 }
 .about-line {
   width: 400px;
@@ -783,12 +783,12 @@ body {
 }
 .work-information .work-information-skills {
   display: inline;
-  cursor: pointer;
+  cursor: none;
   color: rebeccapurple;
 }
 .work-information .work-information-tools {
   display: inline;
-  cursor: pointer;
+  cursor: none;
   color: #b9301e;
 }
 .work-line {
@@ -848,7 +848,7 @@ body {
   justify-content: center;
   margin-top: 25%;
   margin-bottom: 20%;
-  cursor: pointer;
+  cursor: none;
 }
 .socials :hover {
   text-decoration: wavy;
@@ -868,4 +868,30 @@ body {
   width: 30px;
   height: 30px;
   margin-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.cursor {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #b3a5a5;
+  border-radius: 50%;
+  position: absolute;
+  transition-timing-function: ease-in;
+  animation: cursora 0.5s infinite alternate;
+  background-color: #000000;
+  opacity: 40%;
+}
+
+@keyframes cursora {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
 }

@@ -35,13 +35,13 @@
     <!-- nav menu -->
     <nav class="nav-menu" id="nav-menu" onclick="menu-activated()">
         <hr class=" nav-line nav-line1">
-        <a class="nav-elements nav-menu-home">HOME</a>
+        <a class="nav-elements nav-menu-home" onclick ="gethome()" href="#header">HOME</a>
         <hr class="nav-line nav-line2">
-        <a class="nav-elements nav-menu-about">ABOUT</a>
+        <a class="nav-elements nav-menu-about" onclick ="gethome()" href="#about">ABOUT</a>
         <hr class="nav-line nav-line3">
-        <a class="nav-elements nav-menu-work">WORK</a>
+        <a class="nav-elements nav-menu-work" onclick ="gethome()" href="#work">WORK</a>
         <hr class="nav-line nav-line4">
-        <a class="nav-elements nav-menu-socials">SOCIALS</a>
+        <a class="nav-elements nav-menu-socials" onclick ="gethome()" href="#socials" >SOCIALS</a>
         <hr class="nav-line nav-line5">
     </nav>
     <!-- background -->
@@ -91,7 +91,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="about-header">
             WHO AM I
         </div>
@@ -149,7 +149,7 @@
             </div>
         </div>
     </section>
-    <section class="work">
+    <section class="work" id="work">
         <div class="work-header">
             my skills and work
         </div>
@@ -160,7 +160,7 @@
             and <p class="work-information-skills" onmouseover="cPng()" onmouseleave="cLeave()">C</p>, and
             I am
             proficient in using tools like <p class="work-information-tools" onmouseover="figmaPng()"
-                onmouseleave="figmaPngLeave()">FIgma</p>and <p class="work-information-tools" onmouseover="tensorflowPng()"
+                onmouseleave="figmaPngLeave()">FIgma</p> and <p class="work-information-tools" onmouseover="tensorflowPng()"
                 onmouseleave="tensorflowPngLeave()"> Tensorflow</p> for machine
             learning and deep learning. With my abilities, I have actively participated in various hackathons and have
             completed two web projects while in college. I have made sure to showcase these projects on my GitHub
@@ -189,7 +189,7 @@
     <div class="github-show">
         <a href="" class="github-show-link">GITHUB</a>
     </div>
-    <section class="socials">
+    <section class="socials" id="socials">
         <a class="socials-github"><i class="fa-brands fa-github"></i></a>
         <a class="socials-mail"><i class="fa-solid fa-envelope"></i></a>
         <a class="socials-linkedin"><i class="fa-brands fa-linkedin"></i></a>
@@ -198,5 +198,7 @@
     <div class="footer">
         made with love by ruff   <img src="redheart.png" alt="red-heart" class="red-heart">
     </div>
-
+    <div class="cursor">
+        
+    </div>
 </html>

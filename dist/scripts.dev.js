@@ -248,3 +248,21 @@ var tensorflowPng = function tensorflowPng() {
 var tensorflowPngLeave = function tensorflowPngLeave() {
   worktensorflow.classList.remove("png-show");
 };
+
+var gethome = function gethome() {
+  nav.classList.remove("menu-toggled");
+  mainBody.classList.remove("menu-body-hide");
+  darkModeIcon.classList.remove("dark-mode-icon-hide");
+  header.classList.remove("color-change");
+  websiteName.classList.remove("color-change");
+  menuTogglerTwo.classList.remove("color-change");
+  menuTogglerThree.classList.remove("color-change");
+  background.classList.remove("menu-toggled-background");
+  body.classList.remove("overflow-hidden");
+}; //cursor 
+
+
+var cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove", function (e) {
+  cursor.setAttribute("style", "top : " + (e.pageY - 35) + "px;left : " + (e.pageX - 35) + "px");
+});
