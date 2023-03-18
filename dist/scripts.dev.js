@@ -260,9 +260,7 @@ var gethome = function gethome() {
   background.classList.remove("menu-toggled-background");
   body.classList.remove("overflow-hidden");
 }; //cursor 
-
-
-var cursor = document.querySelector(".cursor");
-document.addEventListener("mousemove", function (e) {
-  cursor.setAttribute("style", "top : " + (e.pageY - 35) + "px;left : " + (e.pageX - 35) + "px");
-});
+// const cursor = document.querySelector(".cursor");
+// document.addEventListener("mousemove", e => {
+//     cursor.setAttribute("style", "top : " + (e.pageY - 35) + "px;left : " + (e.pageX - 35) + "px")
+// })
