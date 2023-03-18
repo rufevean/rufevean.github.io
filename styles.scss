@@ -45,7 +45,7 @@ body {
     float: left;
 }
 .menu-toggled-background {
-    margin-top: -70%;
+    margin-top: -56%;
     filter: blur(4px) grayscale(60%);
 }
 
@@ -292,7 +292,7 @@ body {
     margin-left: -100%;
     overflow-x: hidden;
     color: aliceblue;
-    font-size: calc($defualt-font-size * 3);
+    font-size: calc($defualt-font-size * 2);
     opacity: 80%;
     margin-top: 10%;
     margin-right: 10%;
@@ -304,17 +304,18 @@ body {
 
     .nav-line {
         font-size: 3vmin;
-        width: 25%;
+        width: 20%;
         align-items: center;
-        color: aliceblue;
+        color: rgb(0, 0, 0);
         border-width: 1px;
+        border-color: #000000;
     }
     .nav-elements {
         opacity: 60%;
         &:hover {
             opacity: 100%;
         }
-        margin-left: 43%;
+        margin-left: 45%;
     }
 }
 
@@ -375,7 +376,7 @@ body {
 // body-elements
 
 .main-body {
-    margin-top: -18%;
+    margin-top: -10%;
     z-index: 1;
     display: grid;
     grid-template-columns: 10% 1fr 6fr 10%;
