@@ -18,17 +18,20 @@ body {
     margin: 0;
     height: 100vh;
     background-color: #270015;
+    color: white;;
     background-image: url("https://www.linkpicture.com/q/100-50-15.png");
     background-size: auto;
     background-repeat: repeat;
     overflow-x: hidden;
+    cursor: none;
     // scroll-behavior: smooth;
 }
 .dark-mode {
-    background-color: #25265c !important;
+    background-color: #383980 !important;
     background-image: url("https://www.linkpicture.com/q/100-50-15.png");
     background-size: auto;
     background-repeat: repeat;
+    color:#000000 !important;
 }
 
 //creating a background
@@ -44,6 +47,7 @@ body {
     background-size: cover;
     float: left;
 }
+
 .menu-toggled-background {
     margin-top: -56%;
     filter: blur(4px) grayscale(60%);
@@ -58,13 +62,11 @@ body {
     grid-template-columns: 2fr 3fr 1.5fr 1.5fr;
     grid-template-areas: "website-name . dark-mode-toggle menu-toggle";
     width: 100%;
-    
-    color:white;
+
     margin-top: 0%;
     .website-name {
         opacity: 100%;
         padding: 30px;
-        color:white;
         font-size: $defualt-font-size;
         font-family: $primary-font;
         margin-left: 10%;
@@ -80,17 +82,16 @@ body {
         align-self: center;
         margin-top: calc(20% + 10px);
 
-
         .dark-mode-checkbox {
             display: none;
         }
         .dark-mode-icon {
             font-size: 1.6rem;
-            color:white;
+            color: inherit;
             &:hover {
                 cursor: none;
             }
-            @media screen and (min-width: 1601px){
+            @media screen and (min-width: 1601px) {
                 margin-top: calc(21% + 10px);
             }
         }
@@ -100,7 +101,7 @@ body {
         grid-area: menu-toggle;
         margin-top: calc(27%);
         justify-self: start;
-        
+
         #menu-toggler {
             margin-top: -5%;
             display: none;
@@ -111,7 +112,6 @@ body {
         .menu-toggler-line {
             background: white;
             height: 1px;
-            color:white;
         }
     }
     #menu-toggler {
@@ -289,7 +289,7 @@ body {
 .nav-menu {
     display: inline-flex;
     z-index: -1;
-    margin-left: -100%;
+    margin-left: -103%;
     overflow-x: hidden;
     color: aliceblue;
     font-size: calc($defualt-font-size * 2);
@@ -308,7 +308,7 @@ body {
         align-items: center;
         color: rgb(0, 0, 0);
         border-width: 1px;
-        border-color: #000000;
+        border-color: #ffffff;
     }
     .nav-elements {
         opacity: 60%;
@@ -462,18 +462,18 @@ body {
     }
     .header {
         .website-name {
-            color: white;
+            color: inherit;
         }
         .dark-mode-toggle {
             .dark-mode-icon {
-                color: aliceblue;
+                color: inherit;
             }
         }
         .menu-toggle {
             margin-top: 43%;
             margin-right: 5%;
             .menu-toggler-line {
-                color: aliceblue;
+                color: inherit;
             }
         }
     }
@@ -546,7 +546,7 @@ body {
 
 .quote {
     display: flex;
-    color: rgb(255, 255, 255);
+    color: inherit;
     align-items: center;
     margin-top: 5%;
     flex-direction: column;
@@ -561,6 +561,7 @@ body {
     &-text {
         align-self: center;
         font-family: $primary-font;
+        color: inherit;
         font-size: calc($defualt-font-size - 1vmin);
     }
 
@@ -617,17 +618,17 @@ body {
     grid-template-columns: 3fr 1fr 3fr;
     grid-template-rows: repeat(2, auto);
     gap: 20px;
+    border-color: transparent;
+    color: inherit;
     .about-header {
         font-size: $defualt-font-size;
         font-family: $primary-font;
-        color: white;
         grid-row: 1;
         justify-self: self-end;
     }
     &-information {
         font-size: calc($defualt-font-size - 1vmin);
         font-family: $primary-font;
-        color: white;
         grid-row: 2;
         margin-left: 30%;
         margin-right: -19%;
@@ -680,21 +681,19 @@ body {
 .resume-show {
     font-size: calc($defualt-font-size - 1vmin);
     font-family: $primary-font;
+    color: inherit;
     &-link {
-        color: white;
         text-decoration: none;
         margin-left: 48%;
     }
 }
 
 #f1-png {
-    color: white !important;
     width: 500px;
     margin-left: -30%;
 }
 
 #sunsets-png {
-    color: white !important;
     width: 600px;
     filter: none !important;
     margin-left: -50%;
@@ -714,13 +713,11 @@ body {
         display: inline;
     }
     #f1-png {
-        color: white !important;
         width: 600px;
         margin-left: -30%;
     }
 
     #sunsets-png {
-        color: white !important;
         width: 700px;
         filter: none !important;
         margin-left: -50%;
@@ -733,7 +730,7 @@ body {
 //QUOTE 2
 .quote2 {
     display: flex;
-    color: rgb(255, 255, 255);
+    color: inherit;
     align-items: center;
     margin-top: 5%;
     flex-direction: column;
@@ -804,7 +801,7 @@ body {
     grid-template-rows: repeat(2, auto);
     gap: 20px;
     font-family: $primary-font;
-    color: white;
+    color: inherit;
 
     &-header {
         font-size: $defualt-font-size;
@@ -869,7 +866,6 @@ body {
     font-size: calc($defualt-font-size - 1vmin);
     font-family: $primary-font;
     &-link {
-        color: white;
         text-decoration: none;
         margin-left: 49%;
     }
@@ -883,64 +879,129 @@ body {
     }
 }
 
-
-.socials{
+.socials {
     display: flex;
+    color:inherit;
     font-size: 7vmin;
-    color: white;
     gap: 150px;
     justify-content: center;
     margin-top: 25%;
     margin-bottom: 20%;
     cursor: none;
-    :hover{
-        text-decoration:wavy;
+    :hover {
+        text-decoration: wavy;
         font-size: 11vmin;
         color: rgb(185, 48, 30);
     }
 }
 
-.footer{
+.footer {
     margin-bottom: 2%;
     font-size: 3vmin;
     font-family: $primary-font;
-    color: rgb(241, 241, 241);
+    color: inherit;
     display: flex;
     justify-content: center;
-    .red-heart{
+    .red-heart {
         width: 30px;
         height: 30px;
-        margin-left:10px; 
+        margin-left: 10px;
     }
 }
 
-a{
+a {
     text-decoration: none;
-    color:white
+    color: inherit;
 }
 
-.cursor{
+.cursor {
     width: 70px;
     height: 70px;
     border: 2px solid #b3a5a5;
     border-radius: 50%;
     position: absolute;
     transition-timing-function: ease-in;
-    animation: cursora .5s infinite alternate;
-    background-color: #000000;
-    opacity: 40%;
-    // z-index: 1000;
+    // animation: cursora 0.5s infinite alternate;
+    background-color: #383980;
+    opacity: 100%;
+     z-index: -1;
     pointer-events: none;
 }
 
-@keyframes cursora {
+// @keyframes cursora {
+//     from {
+//         transform: scale(1);
+//     }
 
-    from{
-        transform: scale(1);
-    }
+//     to {
+//         transform: scale(0.7);
+//     }
+// }
 
-    to {
-        transform:scale(0.7);
+.cursor-big {
+    width: 120px;
+    height: 120px;
+    animation-name: cursor-big;
+    animation-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    display: inline-block;
+}
+@keyframes cursor-big {
+    0% {
+        width: 70px;
+        height: 70px;
     }
-    
+    25% {
+        width: 77px;
+        height: 77px;
+    }
+    50% {
+        width: 85px;
+        height: 85px;
+    }
+    75% {
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.cursor-small {
+    width: 70px;
+    height: 70px;
+    animation-name: cursor-small;
+    animation-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    display: inline-block;
+}
+@keyframes cursor-small {
+    100% {
+        width: 70px;
+        height: 70px;
+    }
+    75% {
+        width: 77px;
+        height: 77px;
+    }
+    50% {
+        width: 85px;
+        height: 85px;
+    }
+    25% {
+        width: 100px;
+        height: 100px;
+    }
+    0% {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.change-black{
+    color:black !important;
 }

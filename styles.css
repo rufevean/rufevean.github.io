@@ -14,17 +14,20 @@ body {
   margin: 0;
   height: 100vh;
   background-color: #270015;
+  color: white;
   background-image: url("https://www.linkpicture.com/q/100-50-15.png");
   background-size: auto;
   background-repeat: repeat;
   overflow-x: hidden;
+  cursor: none;
 }
 
 .dark-mode {
-  background-color: #25265c !important;
+  background-color: #383980 !important;
   background-image: url("https://www.linkpicture.com/q/100-50-15.png");
   background-size: auto;
   background-repeat: repeat;
+  color: #000000 !important;
 }
 
 .background {
@@ -54,13 +57,11 @@ body {
   grid-template-columns: 2fr 3fr 1.5fr 1.5fr;
   grid-template-areas: "website-name . dark-mode-toggle menu-toggle";
   width: 100%;
-  color: white;
   margin-top: 0%;
 }
 .header .website-name {
   opacity: 100%;
   padding: 30px;
-  color: white;
   font-size: 6vmin;
   font-family: "Amatic SC";
   margin-left: 10%;
@@ -80,7 +81,7 @@ body {
 }
 .header .dark-mode-toggle .dark-mode-icon {
   font-size: 1.6rem;
-  color: white;
+  color: inherit;
 }
 .header .dark-mode-toggle .dark-mode-icon:hover {
   cursor: none;
@@ -106,7 +107,6 @@ body {
 .header .menu-toggle .menu-toggler-line {
   background: white;
   height: 1px;
-  color: white;
 }
 .header #menu-toggler {
   display: none;
@@ -281,7 +281,7 @@ body {
 .nav-menu {
   display: inline-flex;
   z-index: -1;
-  margin-left: -100%;
+  margin-left: -103%;
   overflow-x: hidden;
   color: aliceblue;
   font-size: 12vmin;
@@ -300,7 +300,7 @@ body {
   align-items: center;
   color: rgb(0, 0, 0);
   border-width: 1px;
-  border-color: #000000;
+  border-color: #ffffff;
 }
 .nav-menu .nav-elements {
   opacity: 60%;
@@ -450,17 +450,17 @@ body {
     margin-top: -32%;
   }
   .header .website-name {
-    color: white;
+    color: inherit;
   }
   .header .dark-mode-toggle .dark-mode-icon {
-    color: aliceblue;
+    color: inherit;
   }
   .header .menu-toggle {
     margin-top: 43%;
     margin-right: 5%;
   }
   .header .menu-toggle .menu-toggler-line {
-    color: aliceblue;
+    color: inherit;
   }
   .scroll-indication {
     display: none;
@@ -515,7 +515,7 @@ body {
 }
 .quote {
   display: flex;
-  color: rgb(255, 255, 255);
+  color: inherit;
   align-items: center;
   margin-top: 5%;
   flex-direction: column;
@@ -531,6 +531,7 @@ body {
 .quote-text {
   align-self: center;
   font-family: "Amatic SC";
+  color: inherit;
   font-size: 5vmin;
 }
 .quote-svg-two {
@@ -579,18 +580,18 @@ body {
   grid-template-columns: 3fr 1fr 3fr;
   grid-template-rows: repeat(2, auto);
   gap: 20px;
+  border-color: transparent;
+  color: inherit;
 }
 .about .about-header {
   font-size: 6vmin;
   font-family: "Amatic SC";
-  color: white;
   grid-row: 1;
   justify-self: self-end;
 }
 .about-information {
   font-size: 5vmin;
   font-family: "Amatic SC";
-  color: white;
   grid-row: 2;
   margin-left: 30%;
   margin-right: -19%;
@@ -640,21 +641,19 @@ body {
 .resume-show {
   font-size: 5vmin;
   font-family: "Amatic SC";
+  color: inherit;
 }
 .resume-show-link {
-  color: white;
   text-decoration: none;
   margin-left: 48%;
 }
 
 #f1-png {
-  color: white !important;
   width: 500px;
   margin-left: -30%;
 }
 
 #sunsets-png {
-  color: white !important;
   width: 600px;
   filter: none !important;
   margin-left: -50%;
@@ -675,12 +674,10 @@ body {
     display: inline;
   }
   #f1-png {
-    color: white !important;
     width: 600px;
     margin-left: -30%;
   }
   #sunsets-png {
-    color: white !important;
     width: 700px;
     filter: none !important;
     margin-left: -50%;
@@ -691,7 +688,7 @@ body {
 }
 .quote2 {
   display: flex;
-  color: rgb(255, 255, 255);
+  color: inherit;
   align-items: center;
   margin-top: 5%;
   flex-direction: column;
@@ -756,7 +753,7 @@ body {
   grid-template-rows: repeat(2, auto);
   gap: 20px;
   font-family: "Amatic SC";
-  color: white;
+  color: inherit;
 }
 .work-header {
   font-size: 6vmin;
@@ -820,7 +817,6 @@ body {
   font-family: "Amatic SC";
 }
 .github-show-link {
-  color: white;
   text-decoration: none;
   margin-left: 49%;
 }
@@ -832,8 +828,8 @@ body {
 }
 .socials {
   display: flex;
+  color: inherit;
   font-size: 7vmin;
-  color: white;
   gap: 150px;
   justify-content: center;
   margin-top: 25%;
@@ -851,7 +847,7 @@ body {
   margin-bottom: 2%;
   font-size: 3vmin;
   font-family: "Amatic SC";
-  color: rgb(241, 241, 241);
+  color: inherit;
   display: flex;
   justify-content: center;
 }
@@ -863,7 +859,7 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
+  color: inherit;
 }
 
 .cursor {
@@ -873,17 +869,76 @@ a {
   border-radius: 50%;
   position: absolute;
   transition-timing-function: ease-in;
-  animation: cursora 0.5s infinite alternate;
-  background-color: #000000;
-  opacity: 40%;
+  background-color: #383980;
+  opacity: 100%;
+  z-index: -1;
   pointer-events: none;
 }
 
-@keyframes cursora {
-  from {
-    transform: scale(1);
+.cursor-big {
+  width: 120px;
+  height: 120px;
+  animation-name: cursor-big;
+  animation-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  display: inline-block;
+}
+
+@keyframes cursor-big {
+  0% {
+    width: 70px;
+    height: 70px;
   }
-  to {
-    transform: scale(0.7);
+  25% {
+    width: 77px;
+    height: 77px;
   }
+  50% {
+    width: 85px;
+    height: 85px;
+  }
+  75% {
+    width: 100px;
+    height: 100px;
+  }
+  100% {
+    width: 120px;
+    height: 120px;
+  }
+}
+.cursor-small {
+  width: 70px;
+  height: 70px;
+  animation-name: cursor-small;
+  animation-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  display: inline-block;
+}
+
+@keyframes cursor-small {
+  100% {
+    width: 70px;
+    height: 70px;
+  }
+  75% {
+    width: 77px;
+    height: 77px;
+  }
+  50% {
+    width: 85px;
+    height: 85px;
+  }
+  25% {
+    width: 100px;
+    height: 100px;
+  }
+  0% {
+    width: 120px;
+    height: 120px;
+  }
+}
+.change-black {
+  color: black !important;
 }/*# sourceMappingURL=styles.css.map */

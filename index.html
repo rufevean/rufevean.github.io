@@ -19,12 +19,12 @@
         <div class="dark-mode-toggle">
             <input class="dark-mode-checkbox dark-mode-icon" type="checkbox" id="dark-mode-toggler" name value
                 unchecked>
-            <label for="dark-mode-toggler">
+            <label for="dark-mode-toggler" onmouseenter="cursorbig()" onmouseleave="cursorsmall()" >
                 <i class="fa-solid fa-cloud-moon dark-mode-icon " id="dark-mode-icon"></i>
             </label>
         </div>
         <input type="checkbox" id="menu-toggler" name value unchecked>
-        <label for="menu-toggler" class="menu-toggler menu-toggle">
+        <label for="menu-toggler" onmouseenter="cursorbig()" onmouseleave="cursorsmall()" class="menu-toggler menu-toggle">
             <div class="menu-toggle" id="menu-toggler-checkbox">
                 <hr id="menu-toggler-one" class="menu-toggler-line">
                 <hr id="menu-toggler-two" class="menu-toggler-line">
@@ -74,7 +74,7 @@
         <div>
             <img src="Line1.svg" alt="quote-avg-one" class="quote-svg-one">
         </div>
-        <div class="quote-text">
+        <div class="quote-text" onmouseenter="cursorbig()" onmouseleave="cursorsmall()">
             it is about the cycle of endless refinement and continous improvement
         </div>
         <div>
@@ -209,7 +209,7 @@
     <div class="footer">
         made with love by ruff <img src="redheart.png" alt="red-heart" class="red-heart">
     </div>
-    <div class="cursor">
+    <div class="cursor" id="cursor">
 
     </div>
 

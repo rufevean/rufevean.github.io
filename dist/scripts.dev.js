@@ -6,7 +6,19 @@
 //     cursor.setAttribute("style", "top : " + (e.pageY - 15) + "px;left : " + (e.pageX - 15) + "px")
 // })
 // website-name animation
+//cursor
+var cursorbig = function cursorbig() {
+  cursor.classList.add("cursor-big");
+  curs1.classList.remove("cursor-small");
+};
+
+var cursorsmall = function cursorsmall() {
+  cursor.classList.add("cursor-small");
+  curs1.classList.remove("cursor-big");
+};
+
 var nameList = ["g/RUFEVEAN", "gi/RUFEVEAN", "git/RUFEVEAN", "gith/RUFEVEAN", "githu/RUFEVEAN", "github/RUFEVEAN", "github./RUFEVEAN", "github.c/RUFEVEAN", "github.co/RUFEVEAN", "github.com/RUFEVEAN"];
+var curs1 = document.getElementById("cursor");
 var count1 = 0;
 
 var animation1 = function animation1() {
@@ -14,12 +26,15 @@ var animation1 = function animation1() {
 
   if (count1 != nameList.length - 1) {
     count1 = count1 + 1;
-  }
+  } // document.getElementById("website-name").classList.add("change-black");
+
 };
 
 var animationInterval;
 
 var animationMain = function animationMain() {
+  cursor.classList.add("cursor-big");
+  curs1.classList.remove("cursor-small");
   count1 = 0;
   animationInterval = setInterval(animation1, 100);
 };
@@ -27,6 +42,8 @@ var animationMain = function animationMain() {
 var afterAnimation = function afterAnimation() {
   clearInterval(animationInterval);
   document.getElementById("website-name").innerHTML = "/RUFEVEAN";
+  cursor.classList.add("cursor-small");
+  curs1.classList.remove("cursor-big");
 }; //dark mode toggler
 
 

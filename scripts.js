@@ -5,7 +5,17 @@
 // })
 
 // website-name animation
+//cursor
+let cursorbig = function(){
+    cursor.classList.add("cursor-big");
+    curs1.classList.remove("cursor-small");
+}
 
+
+let cursorsmall = function(){
+    cursor.classList.add("cursor-small");
+    curs1.classList.remove("cursor-big");
+}
 let nameList = [
     "g/RUFEVEAN",
     "gi/RUFEVEAN",
@@ -18,6 +28,8 @@ let nameList = [
     "github.co/RUFEVEAN",
     "github.com/RUFEVEAN",
 ];
+let curs1 = document.getElementById("cursor");
+
 let count1 = 0;
 
 let animation1 = function () {
@@ -25,9 +37,13 @@ let animation1 = function () {
     if (count1 != nameList.length - 1) {
         count1 = count1 + 1;
     }
+    // document.getElementById("website-name").classList.add("change-black");
+
 };
 let animationInterval;
 let animationMain = function () {
+    cursor.classList.add("cursor-big");
+    curs1.classList.remove("cursor-small");
     count1 = 0;
     animationInterval = setInterval(animation1, 100);
 };
@@ -35,6 +51,8 @@ let animationMain = function () {
 let afterAnimation = function () {
     clearInterval(animationInterval);
     document.getElementById("website-name").innerHTML = "/RUFEVEAN";
+    cursor.classList.add("cursor-small");
+    curs1.classList.remove("cursor-big");
 };
 
 //dark mode toggler
