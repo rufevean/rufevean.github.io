@@ -74,6 +74,16 @@ body {
         text-decoration: none;
         position: fixed;
     }
+    @media (max-width: 768px) {
+        .website-name {
+            margin-left: 0%;
+        }
+    }
+    @media (max-width: 1200px) and (min-width:769px){
+        .website-name {
+            margin-left: 5%;
+        }
+    }
 
     .dark-mode-toggle {
         opacity: 100%;
@@ -96,6 +106,16 @@ body {
             }
         }
     }
+    @media (max-width: 768px) {
+        .dark-mode-toggle {
+            margin-top: 75%;
+        }
+    }
+    @media (max-width: 1200px) and (min-width:769px){
+        .dark-mode-toggle {
+            margin-top: 55%;
+        }
+    }
     .menu-toggle {
         width: 30px;
         grid-area: menu-toggle;
@@ -116,6 +136,16 @@ body {
     }
     #menu-toggler {
         display: none;
+    }
+    @media (max-width: 768px) {
+        .menu-toggle {
+            margin-top: 60% !important;
+        }
+    }
+    @media (max-width: 1200px) and (min-width:769px){
+        .menu-toggle {
+            margin-top: 50% !important;
+        }
     }
 }
 .dark-mode-icon-hide {
@@ -487,7 +517,8 @@ body {
         }
     }
     .background {
-        display: none;
+        top:0%;
+        height: 70vh;
     }
 }
 
